@@ -1,7 +1,6 @@
 const lockButton = document.getElementById("lockButton");
 const lockScreen = document.getElementById("lockScreen");
 const music = document.getElementById("bgMusic");
-const readingMusic = document.getElementById("readingMusic");
 const cursorGlow = document.querySelector(".cursor-glow");
 
 document.addEventListener("mousemove", (event) => {
