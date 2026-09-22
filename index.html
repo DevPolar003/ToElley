@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>For My MoMo</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="cursor-glow"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <section id="lockScreen">
+    <div class="lock-stars"></div>
+
+    <div class="lock-container">
+      <div class="lock-glow"></div>
+
+      <button id="lockButton" class="lock-button" aria-label="Open">
+        <span>🔒</span>
+      </button>
+
+      <p class="lock-text">there is something waiting for you</p>
+      <span class="lock-hint">click to unlock</span>
+    </div>
+  </section>
+
+  <audio id="bgMusic" loop>
+    <source src="Sailor Song.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="readingMusic" loop>
+    <source src="Cambria.mp3" type="audio/mpeg">
+  </audio>
+
+  <section id="intro" class="d-flex justify-content-center align-items-center">
+    <div class="pixel-stars"></div>
+    <div class="shooting-stars"></div>
+
+    <div class="intro-content text-center">
+      <div class="orbital-light"></div>
+
+      <span class="eyebrow">a little universe, made for you</span>
+
+      <h1 class="main-title">Ellery</h1>
+
+      <div class="title-line"></div>
+
+      <p class="intro-text" id="typingText"></p>
+
+      <button id="enterBtn" class="magic-btn hidden-btn">
+        <span>continue</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </div>
+  </section>
+
+  <main id="mainSite" class="hidden-section">
+
+    <div class="particles"></div>
+    <div class="grain"></div>
+
+    <div class="romantic-decor" aria-hidden="true">
+      <span class="decor decor-cat">🐈</span>
+      <span class="decor decor-heart">♡</span>
+      <span class="decor decor-strawberry">🍓</span>
+      <span class="decor decor-heart-two">♥</span>
+      <span class="decor decor-cat-two">🐈‍⬛</span>
+      <span class="decor decor-strawberry-two">🍓</span>
+    </div>
+
+    <div class="container content-box">
+
+      <header class="hero reveal">
+        <span class="eyebrow">from my little corner of the valley</span>
+
+        <h1 class="hero-title">
+          For the girl who makes<br>
+          ordinary days feel enchanted.
+        </h1>
+
+        <p class="hero-subtitle">
+          Some feelings arrive quietly, like evening settling over Pelican Town.
+          Then one day you realize they have become part of the landscape.
+        </p>
+      </header>
+
+      <section class="love-section reveal">
+        <div class="glass-card">
+          <span class="card-symbol">✦</span>
+
+          <p class="love-text">
+            I love the way you talk about the things you love.
+            The way your stories make small things feel important.
+          </p>
+
+          <p class="love-text">
+            I love the way you read, the way you care for children,
+            and the calm little world that seems to follow you wherever you go.
+          </p>
+
+          <p class="love-text">
+            Somewhere between our conversations, your laugh,
+            and all those tiny moments I keep replaying in my head,
+            you became someone incredibly precious to me.
+          </p>
+
+          <p class="love-text final-paragraph">
+            And if my heart had a farm in Stardew Valley,
+            I think I would plant your name right beside the house.
+            Something I could water every morning,
+            watch grow through every season,
+            and never get tired of coming home to.
+          </p>
+        </div>
+      </section>
+
+      <section class="stardew-section reveal">
+        <div class="section-heading">
+          <span class="pixel-icon">✧</span>
+          <span>our little valley</span>
+          <span class="pixel-icon">✧</span>
+        </div>
+
+        <h2 class="section-title">The little things I treasure</h2>
+
+        <div class="stardew-grid">
+          <article class="game-card">
+            <div class="game-card-icon">🎁</div>
+            <h3>Your gifts</h3>
+            <p>
+              Even the little gifts you give me in Stardew Valley feel strangely
+              special. It is never just an item in my inventory.
+              It is a tiny reminder that, in our little pixel world,
+              you thought of me.
+            </p>
+          </article>
+
+          <article class="game-card">
+            <div class="game-card-icon">🌱</div>
+            <h3>Growing together</h3>
+            <p>
+              We plant, explore, work, get distracted, and somehow turn a simple
+              day on the farm into another memory. I like that kind of progress:
+              slow, imperfect, and shared.
+            </p>
+          </article>
+
+          <article class="game-card">
+            <div class="game-card-icon">🌙</div>
+            <h3>After sunset</h3>
+            <p>
+              There is something beautiful about ending a long in-game day
+              knowing there is someone waiting at the other side of the screen.
+              Even a quiet night in the valley feels warmer that way.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="memory-section reveal">
+        <div class="memory-orbit">
+          <div class="orbit-dot"></div>
+        </div>
+
+        <span class="eyebrow">if our story were a save file</span>
+
+        <h2 class="memory-title">
+          I would never skip<br>
+          this day.
+        </h2>
+
+        <p class="memory-text">
+          I do not know what every season will bring.
+          Maybe rain, maybe storms, maybe a ridiculous amount of crops.
+          But I know I want to keep discovering the little moments with you.
+        </p>
+      </section>
+
+      <section class="question-box reveal">
+        <span class="eyebrow">one last question</span>
+
+        <h2 class="mini-title">So, Ellery...</h2>
+
+        <h1 class="question">
+          Would you like to be my girlfriend?
+        </h1>
+
+        <p class="question-subtitle">
+          No pressure. Just one tiny question from one very fond farmer.
+        </p>
+
+        <div class="buttons">
+          <button id="yesBtn" class="magic-btn">
+            <span>Yes</span>
+            <span>♡</span>
+          </button>
+
+          <button id="noBtn" class="dark-btn">
+            No
+          </button>
+        </div>
+      </section>
+
+      <section id="finalScreen" class="hidden-section final-screen reveal">
+        <div class="final-stars">✦ · ✧ · ✦</div>
+
+        <span class="eyebrow">new season unlocked</span>
+
+        <h1 class="final-title">
+          I knew I wanted<br>
+          this chapter with you.
+        </h1>
+
+        <p class="final-text">
+          Thank you for appearing in my life, Ellery.
+        </p>
+
+        <p class="final-text">
+          I hope we keep collecting little moments,
+          silly conversations, late-night thoughts,
+          adventures, gifts, and memories worth keeping.
+        </p>
+
+        <div class="final-signature">♡ Morgan</div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
