@@ -91,24 +91,23 @@ function typeEffect() {
 setTimeout(typeEffect, 800);
 
 enterBtn.addEventListener("click", () => {
-  document.getElementById("intro").classList.add("leave");
+music.pause();
+music.currentTime = 0;
 
-  music.pause();
-  music.currentTime = 0;
+readingMusic.volume = 0;
+readingMusic.play().catch(() => {});
 
-  readingMusic.volume = 0;
-  readingMusic.play().catch(() => {});
+let volume = 0;
 
-  let volume = 0;
-
-  const readingFade = setInterval(() => {
-    if (volume < 0.18) {
-      volume += 0.005;
-      readingMusic.volume = Math.min(volume, 0.18);
-    } else {
-      clearInterval(readingFade);
-    }
-  }, 120);
+const readingFade = setInterval(() => {
+  if (volume < 0.18) {
+    volume += 0.005;
+    readingMusic.volume = Math.min(volume, 0.18);
+  } else {
+    clearInterval(readingFade);
+  }
+}, 120);
+  
 
   setTimeout(() => {
     document.getElementById("intro").style.display = "none";
