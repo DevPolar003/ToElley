@@ -33,6 +33,7 @@ lockButton.addEventListener("click", () => {
   }, 1500);
 });
 
+
 const typingText = document.getElementById("typingText");
 const enterBtn = document.getElementById("enterBtn");
 
@@ -72,7 +73,8 @@ function typeEffect() {
   if (index < introMessage.length) {
     const char = introMessage.charAt(index);
 
-    typingText.innerHTML += char === "\n" ? "<br>" : char;
+    typingText.innerHTML +=
+      char === "\n" ? "<br>" : char;
 
     index++;
 
@@ -90,24 +92,9 @@ function typeEffect() {
 
 setTimeout(typeEffect, 800);
 
+
 enterBtn.addEventListener("click", () => {
-music.pause();
-music.currentTime = 0;
-
-readingMusic.volume = 0;
-readingMusic.play().catch(() => {});
-
-let volume = 0;
-
-const readingFade = setInterval(() => {
-  if (volume < 0.18) {
-    volume += 0.005;
-    readingMusic.volume = Math.min(volume, 0.18);
-  } else {
-    clearInterval(readingFade);
-  }
-}, 120);
-  
+  document.getElementById("intro").classList.add("leave");
 
   setTimeout(() => {
     document.getElementById("intro").style.display = "none";
@@ -124,6 +111,7 @@ const readingFade = setInterval(() => {
     });
   }, 1000);
 });
+
 
 const noBtn = document.getElementById("noBtn");
 
@@ -151,6 +139,7 @@ noBtn.addEventListener("touchstart", (event) => {
   moveNoButton();
 });
 
+
 document.getElementById("yesBtn").addEventListener("click", () => {
   const questionBox = document.querySelector(".question-box");
 
@@ -168,6 +157,7 @@ document.getElementById("yesBtn").addEventListener("click", () => {
   }, 700);
 });
 
+
 function createFireflies() {
   const container = document.querySelector(".final-screen");
 
@@ -176,8 +166,11 @@ function createFireflies() {
 
     firefly.className = "firefly";
 
-    firefly.style.left = `${Math.random() * 100}%`;
-    firefly.style.top = `${Math.random() * 100}%`;
+    firefly.style.left =
+      `${Math.random() * 100}%`;
+
+    firefly.style.top =
+      `${Math.random() * 100}%`;
 
     firefly.style.animationDelay =
       `${Math.random() * 3}s`;
@@ -189,7 +182,9 @@ function createFireflies() {
   }
 }
 
+
 document.querySelectorAll(".game-card").forEach((card) => {
+
   card.addEventListener("mousemove", (event) => {
     const rect = card.getBoundingClientRect();
 
@@ -213,4 +208,5 @@ document.querySelectorAll(".game-card").forEach((card) => {
     card.style.transform =
       "perspective(900px) rotateX(0) rotateY(0) translateY(0)";
   });
+
 });
